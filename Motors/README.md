@@ -53,7 +53,7 @@ while True:
   sleep(1)
 ```
 
-**Or with This Code:
+**Or with This Code:**
 
 ```python
 import RPi.GPIO as GPIO
