@@ -18,9 +18,9 @@ Of course, it is possible to supply the servo motor with an external power sourc
 
 In most cases, the colors of the servo are as follows and are connected to the Pi:
 
-Black – comes to GND (pin 6) from the Pi
-Red – comes to 3V3 (pin 1) from the Pi
-Yellow/Orange – to a free GPIO pin (e.g., GPIO17, pin 11)
+BROWN/BLACK – comes to GND (pin 6) from the Pi
+RED – comes to 3V3 (pin 1) from the Pi
+YELLOW/ORANGE – to a free GPIO pin (e.g., GPIO17, pin 11)
 
 If you want to play it safe, you can set a ~ 1kΩ resistor between the data pin (yellow/orange) and the Pi. Normally this is not necessary.
 
@@ -34,7 +34,8 @@ The angle of the motor is set along the length of the pulse, so PWM is particula
 
 We either start python (sudo python) or open a new script (sudo nano servomotor.py) with the following content:
 
-'''
+
+```python
 import RPi.GPIO as GPIO
 from gpiozero import Servo
 from time import sleep
@@ -50,9 +51,7 @@ while True:
   servo.mid()
   print("max")
   sleep(1)
-'''
-
-
+```
 
 
 ### Note:
