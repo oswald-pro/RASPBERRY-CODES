@@ -34,8 +34,26 @@ The angle of the motor is set along the length of the pulse, so PWM is particula
 
 We either start python (sudo python) or open a new script (sudo nano servomotor.py) with the following content:
 
+'''
+import RPi.GPIO as GPIO
+from gpiozero import Servo
+from time import sleep
+
+servo = Servo(17)
+
+while True:
+  servo.mid()
+  print("mid")
+  servo.min()
+  print("min")
+  sleep(1)
+  servo.mid()
+  print("max")
+  sleep(1)
+'''
 
 
 
-###Note:
+
+### Note:
 If the servo motor shakes a bit while it is not moving, you can pause the pulse with ChangeDutyCycle(0)
